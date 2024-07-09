@@ -1,0 +1,122 @@
+/* is code ma maina poisition absolute sab ko is liya diya taki ma unha acha sa place kar paun  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.mainbox{
+    /* position: relative; */
+    background: url(anime3.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+ .sidebar{
+    
+    position: absolute;
+    height: 100vh;
+    width: 280px;
+    background: rgba(255,192,203,0.5);
+    box-shadow: 0 0 6px rgba(255,192,203,0.5);
+    transition: all 0.3s linear;
+}
+/* nicha bala code sa ma is anadar or bahar karunga */
+.sidebar{
+    left: -280px;
+}
+.mylogo{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 0 6px rgba(255,192,203,0.5);
+}
+.mylogo a{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    position: absolute;
+    left: 50px ;
+    line-height: 60px;
+    text-decoration: none;
+}
+.menu{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+}
+.menu li{
+    margin-top: 6px;
+    padding: 14px 20px;
+}
+.menu i{
+    color: #fff;
+    font-size: 20px;
+    padding-right: 8px;
+}
+.menu a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+.menu li:hover{
+    /* <border ki bajah sa hi hover karna parubhar kar upar ah raha ha */
+    border: 1px solid #fff;
+    /* box-shadow: 0 0 4px rgba(255,192,203,0.5);; */
+}
+.socialmedia{
+    position: absolute;
+    bottom: 20px;
+    left:50%;
+    transform: translatex(-50%);
+    cursor: pointer;
+}
+.socialmedia i{
+    padding: 0 5px;
+    color: #fff;
+  font-size: 20px;
+  opacity: 0.6;
+}
+.socialmedia i:hover{
+    opacity: 1;
+}
+#checkbox{
+    display: none;
+}
+.btn1 i{
+    color:#fff;
+    font-size: 30px;
+     font-weight: 700;
+     position: absolute;
+     cursor: pointer;
+     left: 16px;
+     line-height: 60px;
+     opacity:1;
+     transition: 0.3s;
+     /* transition:all 0.3s linear; */
+}
+.btn2 i{
+    font-size: 25px;
+    position: absolute;
+    line-height: 60px;
+    cursor: pointer;
+    left:240px;
+    opacity: 1;
+    transition: all 0.3sec linear;
+}
+.btn1 i:hover{
+    font-size: 24px;
+}
+/* nicha bala code sa jab click karega three lines par tab sidebar show hogi */
+/* :checked is a pseudo-class that selects the element only if it is in a checked state, which is typically used for checkboxes and radio buttons 134.
+~ is the general sibling combinator, which selects siblings that come after the element specified before the combinator 1. */
+
+#checkbox:checked~.sidebar{
+    left: 0px;
+}
+#checkbox:checked~.btn1 i{
+opacity: 0;
+}
+
+
+
